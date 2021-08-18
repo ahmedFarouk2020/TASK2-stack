@@ -40,14 +40,14 @@ uint8 push(uint8 value , Stack* ptr_s)
  * Function Description:
  *     remove a value from the top of the stack
  * Parameters: pointer to the stack
- * return: the removed value or exit if the stack is empty
+ * return: the removed value or 255 if the stack is empty
  */
 uint8 pop(Stack* ptr_s)
 {
     if (stackSize(ptr_s)) {
         return ptr_s->data[-- ptr_s->top];
     }
-    exit(123);
+    return 255;
 }
 
 
@@ -55,13 +55,13 @@ uint8 pop(Stack* ptr_s)
  * Function Description:
  *     return the top of the stack
  * Parameters: pointer to the stack
- * return: the top of the stack or exit if the stack is empty
+ * return: the top of the stack or 255 if the stack is empty
  */
 uint8 peek(Stack* ptr_s) {
     if (stackSize(ptr_s)) {
         return ptr_s->data[ptr_s->top-1]; 
     }
-    exit(123);
+    return 255;
 }
 
 
